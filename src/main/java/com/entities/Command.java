@@ -25,14 +25,23 @@ public class Command {
     private String officialSide;
 
     @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "id_sport_kind")
+    @JoinColumn(name = "id_sport_kind",referencedColumnName = "id")
     private KindOfSport kindOfSport;
-
 
     public Command(String name, String logoAddress, String officialSide, KindOfSport kindOfSport) {
         this.name = name;
         this.logoAddress = logoAddress;
         this.officialSide = officialSide;
         this.kindOfSport = kindOfSport;
+    }
+
+    @Override
+    public String toString() {
+        return "Command{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", logoAddress='" + logoAddress + '\'' +
+                ", officialSide='" + officialSide + '\'' +
+                '}';
     }
 }

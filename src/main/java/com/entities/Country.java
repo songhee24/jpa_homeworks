@@ -3,6 +3,8 @@ package com.entities;
 import lombok.*;
 
 import javax.persistence.*;
+import java.util.List;
+
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
@@ -20,5 +22,14 @@ public class Country {
 
     public Country(String name) {
         this.name = name;
+    }
+
+
+    @Override
+    public String toString() {
+        return "Country{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                '}';
     }
 }
