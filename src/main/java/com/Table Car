@@ -1,0 +1,13 @@
+create table car (
+  id serial primary key,
+  name varchar,
+  color varchar
+);
+
+drop table car;
+
+select * from car;
+
+insert into car (name, color)
+values ('aa','aaa');
+
